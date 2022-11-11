@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    container_name: goapp
+    build: .
+    volumes:
+      - ./:/app/
+    ports:
+      - 8080:8080
+    depends_on:
+      - couchbase
+  db:
+    image: couchbase
+    ports:
+      - 8091:8091
+      - 8092:8092
+      - 8093:8093
+    environment:
+      - COUCHBASE_ADMINISTRATOR_USERNAME=Administrator
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=password
+      - COUCHBASE_BUCKET=urls
+      - COUCHBASE_BUCKET_PASSWORD=

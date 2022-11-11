@@ -1,0 +1,8 @@
+server:
+  Host: localhost
+  Port: 8080
+  WriteTimeout: 5s
+  ReadTimeout: 5s
+  IdleTimeout: 5s
+  ReadHeaderTimeout: 5s
+  GracefulShutdownTimeout: 30s

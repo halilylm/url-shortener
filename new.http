@@ -1,0 +1,8 @@
+POST /url/insert HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+Content-Length: 99
+
+{
+  "long_url": "https://docs.couchbase.com/go-sdk/current/howtos/n1ql-queries-with-sdk.html"
+}
